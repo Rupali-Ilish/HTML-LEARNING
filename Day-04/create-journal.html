@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Journal</title>
+</head>
+<body>
+    <h1>Create Journal</h1>
+
+    <form action="/api/v1/journals" method="post">
+
+        <label for="main-title">Journal Title: </label>
+        <input id="main-title" type="text" name="title" placeholder="Enter Journal Title">
+        
+        <br> <br>
+
+        <label for="journal-type">Journal Type</label>
+        <select id="journal-type" name="category">
+            <option value="to-do-list">To-Do List</option>
+            <option value="note">Note</option>
+            <option value="idea">Idea</option>
+            <option value="mood">Mood</option>
+            <option value="goal">Goal</option>
+            <option value="memories">Memories</option>
+        </select>
+
+        <br> <br>
+
+        <label for="journal-entry">Journal Entry</label>
+        <textarea id="journal-entry" name="entry" placeholder="Write your journal here." rows="5" cols="30"></textarea>
+
+        <br><br>
+        <button type="reset">Reset</button>
+        <button type="submit">Create Journal</button>
+
+    </form>
+
+
+</body>
+</html>
